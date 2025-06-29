@@ -1,0 +1,52 @@
+body {
+  font-family: sans-serif;
+  background-color: #f5f5f5;
+  margin: 20px;
+}
+
+.gallery {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 0;
+  margin: 0;
+}
+
+.gallery-item {
+  flex: 1 1 calc(100% - 24px);
+}
+
+.gallery-image {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+/* 📱 Мобільні пристрої до 480px */
+@media (max-width: 480px) {
+  .gallery-item {
+    flex: 1 1 calc(100% - 24px);
+  }
+}
+
+/* 📱📲 Планшети 481px - 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+  .gallery-item {
+    flex: 1 1 calc((50% - 24px));
+  }
+}
+
+/* 🖥️ Десктопи від 769px */
+@media (min-width: 769px) {
+  .gallery-item {
+    flex: 1 1 calc((33.333% - 24px));
+  }
+}
