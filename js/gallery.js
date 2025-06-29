@@ -87,6 +87,7 @@ function createGalleryMarkup(images) {
 galleryContainer.innerHTML = createGalleryMarkup(images);
 
 // Делегування подій
+
 galleryContainer.addEventListener('click', onImageClick);
 
 function onImageClick(event) {
